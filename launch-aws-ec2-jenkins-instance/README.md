@@ -80,3 +80,43 @@ JENKINS_IP="$(terraform output jenkins_ip)"
 # To remove double quotes
 JENKINS_IP=`sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_IP"`
 ```
+
+
+## To connect to the server
+
+
+```sh
+# ssh to the server using the ssh that we created earlier
+ssh ubuntu@${JENKINS_IP} -i key
+```
+- Wait for around 2 minutes untile provisioning is done
+
+- Test if everything is done? (while you are connected to the server)
+```sh
+ls -l
+```
+- If you found docker-compose and Dockerfile files then you are good to continue.
+
+- Start the Jenkins Docker container
+```sh
+sudo docker-compose up -d
+```
+- Jenkins container is running on port 8080
+- Wait untile Jenkins is up.
+- You Can check using this url (http://<JENKINS_IP>:8080/)
+- If you find that jenkins is up
+- Run this command inside your server to get the password and copy it with (ctrl+shift+c)
+
+```sh
+sudo docker-compose exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
+- Paste the password in the browser
+- Install suggested plugins
+- Create the admin account
+- Now your jenkins server is up and running
+
+## Destroy the jenkins server
+```sh
+terraform destroy
+```
