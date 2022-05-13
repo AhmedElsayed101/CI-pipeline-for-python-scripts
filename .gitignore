@@ -24,6 +24,10 @@
 .terraformrc
 terraform.rc
 
+# Ignore terraform cached and lock files
+.terraform
+.terraform.lock.hcl
+
 # Public/private keys
 key
 key.pub
