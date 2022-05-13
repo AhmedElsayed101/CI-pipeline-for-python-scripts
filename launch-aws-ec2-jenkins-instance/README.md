@@ -75,7 +75,7 @@ make jenkins-plan
 # Create infrastructure
 make apply-jenkins-plan
 
-# Get public IP address of GGR
+# Get public IP address of Jenkins server
 JENKINS_IP="$(terraform output jenkins_ip)"
 # To remove double quotes
 JENKINS_IP=`sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_IP"`
