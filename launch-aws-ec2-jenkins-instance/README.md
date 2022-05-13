@@ -51,3 +51,32 @@ cd launch-aws-ec2-jenkins-instance
 # Generate key
 ssh-keygen -t rsa -f ./key
 ```
+
+## To create the ec2 instance:
+
+
+### Create `terraform.tfvars` file (Don't forget to modify it with your aws secret and access keys):
+
+```
+region        = "eu-west-1"
+instance_type = "t3a.small"
+volume_size   = 30
+aws_access_key = "---"
+aws_secret_key = "---"
+name           = "jenkins-server"
+
+```
+
+
+```sh
+#Create jenkins plan
+make jenkins-plan
+
+# Create infrastructure
+make apply-jenkins-plan
+
+# Get public IP address of GGR
+JENKINS_IP="$(terraform output jenkins_ip)"
+# To remove double quotes
+JENKINS_IP=`sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_IP"`
+```
