@@ -38,3 +38,16 @@ aws configure
 #Default region name [eu-west-1]: eu-west-1
 #Default output format [None]: 
 ```
+
+## Clone the repository. Go to the project's folder:
+
+## Go to launch-aws-ec2-jenkins-instance directory:
+```sh
+cd launch-aws-ec2-jenkins-instance
+```
+
+## Generate key
+```sh
+# Generate key
+ssh-keygen -t rsa -f ./key
+```
