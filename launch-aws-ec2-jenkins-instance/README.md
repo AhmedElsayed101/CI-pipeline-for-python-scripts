@@ -1,6 +1,22 @@
+# Launch AWS EC2 instance for Jenkins
+
+## Folder structure
+```sh
+
+├── main.tf                      # Main terrform resources
+├── data.tf                      # Predefined AWS AMI 
+├── jenkins-provision.sh         # Bash file to install docker, docker-compose and jenkins on the server
+├── outputs.tf                   # Define terraform outputs
+├── provider.tf                  # Set providers like aws
+├── variables.tf                 # Define your variables
+├── Makefile                     # Makefile to help automate some terraform commands
+└── README.md                    # ...
+```
+
 # System requirements:
 
 ### You need to use ubuntu or any linux debian based distribution or (windows wsl)
+### Tested on Ubuntu:20.04
 
 ## Update your system
 
@@ -86,10 +102,10 @@ JENKINS_IP=`sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_IP"`
 
 
 ```sh
-# ssh to the server using the ssh that we created earlier
+# Connect to the server using the ssh key that we created earlier.
 ssh ubuntu@${JENKINS_IP} -i key
 ```
-- Wait for around 2 minutes untile provisioning is done
+- Wait for around 2 minutes until provisioning is done
 
 - Test if everything is done? (while you are connected to the server)
 ```sh
