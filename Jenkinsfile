@@ -1,9 +1,14 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('Test') {
+        stage('Mandatory question') {
             steps {
-                sh 'python --version'
+                sh 'python mandatory_question.py'
+            }
+        }
+        stage('Optional question') {
+            steps {
+                sh 'python optional_question.py'
             }
         }
     }
