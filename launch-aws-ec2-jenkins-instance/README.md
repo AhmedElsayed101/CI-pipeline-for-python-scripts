@@ -113,6 +113,10 @@ ls -l
 ```
 - If you found docker-compose and Dockerfile files then you would be good to continue.
 
+- You can use this command to verify provisioning("Cloud Init") output  too.
+```sh
+tail -f /var/log/cloud-init-output.log
+```
 - Start the Jenkins Docker container
 ```sh
 sudo docker-compose up -d
