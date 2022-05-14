@@ -38,83 +38,13 @@ A simple repository for creating CI pipeline for python scripts with Jenkins
 
 
 ## Generate ssh-key pair
-- While inside the Jenkins server terminal, execute the following commands.
-```sh
-# Generate key
-ssh-keygen -t rsa -f ./key
-```
-### Add public key to github
-- Copy ssh public key
-```sh
-# Print the public key
-cat key.pub 
-```
-- Copy the output.
-- Add the public key(key.pub) to github ssh keys
-
-### Add private key to Jenkins credentials
-- Copy ssh public key
-```sh
-# Print the private key
-cat key
-```
-- Copy the output.
-- Add the private key(key) to Jenkins credentials
+- Follow the instructions in this file [Generate ssh-key pair](./readme-files/generate-ssh-key-pair.md)
 
 ## Create GitHub webhook
-
-- Go to your remote Repositry link (https://github.com/<User_name>/<Repositry_name>)
-- Click on Settings
-- Click on webhooks
-- Click on Add webhook
-- Paste your Jenkins server IP with this format
-```
-http://<Jenkins server IP>:<Jenkins server port>/github-webhook/
-# for example
-http://54.75.50.180:8080/github-webhook/
-```
-- Add webhook.
-- Make sure it's connected( Check recent deliveries).
-
+- Follow the instructions in this file [Create GitHub webhook](./readme-files/create-GitHub-webhook.md)
 
 ## Add Docker to Jenkins
-
-### Add docker plugins
-
-- Go to your Jenkins dashboard and click on (Manage Jenkins)
-- Click on (Manage Plugins)
-- Click on (Available) and search for docker
-- Make sure to check Docker, Docker pipeline Plugins
-- Install without restart
-- Check the box to restart
-
-
-### Add Docker to tools
-
-- Make sure that you installed Docker plugins (Docker, Docker pipeline)
-- Go to your Jenkins dashboard and click on (Manage Jenkins)
-- Click on (Global Tool Config)
-- Scroll down till you find Docker section.
-- Click on (Add docker)
-- Click on (Install automatic >> download from docker)
-- save
-
-
-
+- Follow the instructions in this file [Add Docker to Jenkins](./readme-files/add-Docker-to-Jenkins.md)
 
 ## Create the pipeline
-
-- Go to your Jenkins dashboard and click on (New Item)
-- Select (Pipeline) and add a name then press (OK)
-- Check (GitHub hook trigger for GITScm polling)
-- Select Pipeline script from SCM
-- Select (Git) SCm
-- Add your ssh remote repositry url
-- Go to to your Repositry link
-- Click on Clone
-- Select ssh and copy the link
-- Go back to Jenkins and paste the Link
-- Select the ssh Credintial that we have created
-- Change branch to (/main) or leave it blank
-- Make sure that Script Paht is (Jenkins)
-- Click on Save button
+- Follow the instructions in this file [Create the pipeline](./readme-files/create-the-pipeline.md)
