@@ -8,6 +8,7 @@ A simple repository for creating CI pipeline for python scripts with Jenkins
 ├── questions                        # Python logic to solve the questions
 ├── Dockerfile                       # Docker file to create a container for python
 ├── Jenkinsfile                      # Jenkins file to automate CI process
+├── readme-files                     # Folder that contains README file with some instructions
 ├── .gitignore                       # ...
 └── README.md                        # ...
 ```
