@@ -19,13 +19,8 @@ A simple repository for creating CI pipeline for python scripts with Jenkins
 
 
 # For Testers:
+- Follow the instructions in this file [For Testers](./readme-files/for-tester.md)
 
-- To test this pipeline. You should make sure that you have followed the instructions from the DevOps Engineers section below.
-- Make sure that you added ssh keys.
-- Make sure that you created the github webhook.
-- Make sure that Docker plugins are installed.
-- All you have to do is to change the input inside question files.
-- Commit your changes and push the code to GitHub.
 
 
 # For DevOps Engineers:
