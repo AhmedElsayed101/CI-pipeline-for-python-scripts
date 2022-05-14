@@ -46,7 +46,7 @@ USER docker
 RUN mkdir /home/docker/app
 WORKDIR /home/docker/app
 
-# COPY ./questions .
+COPY ./questions .
 
 # make sure all messages always reach console
 ENV PYTHONUNBUFFERED=1
