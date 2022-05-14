@@ -105,7 +105,7 @@ JENKINS_IP=`sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_IP"`
 # Connect to the server using the ssh key that we created earlier.
 ssh ubuntu@${JENKINS_IP} -i key
 ```
-- Wait for around 2 minutes until provisioning is done
+- Wait for around 3 minutes until provisioning is done.
 
 - Test if everything is done? (while you are connected to the server)
 ```sh
@@ -117,6 +117,8 @@ ls -l
 ```sh
 tail -f /var/log/cloud-init-output.log
 ```
+![server-2](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-2.png)
+
 - Start the Jenkins Docker container
 ```sh
 sudo docker-compose up -d
@@ -125,18 +127,33 @@ sudo docker-compose up -d
 - Wait untile Jenkins is up.
 - You Can check using this url (http://<JENKINS_IP>:8080/)
 - If you find that jenkins is up
+![server-3](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-3.png)
+
 - Run this command inside your server to get the password and copy it with (ctrl+shift+c)
 
 ```sh
 sudo docker-compose exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
+![server-4](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-4.png)
 
 - Paste the password in the browser
+![server-5](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-5s.png)
+
 - Install suggested plugins
+![server-6](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-6.png)
+
 - Create the admin account
+![server-8](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-8.png)
+
+- Set the port. Keep the port as it is (8080) to follow the rules of the aws security group that we created.
+
+![server-9](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-9.png)
+
 - Now your jenkins server is up and running
+![server-10](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-10.png)
+
 
 ## Destroy the jenkins server
 ```sh
-terraform destroy
+make destroy
 ```
