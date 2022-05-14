@@ -95,7 +95,7 @@ ssh ubuntu@${JENKINS_IP} -i key
 ```sh
 ls -l
 ```
-- If you found docker-compose and Dockerfile files then you are good to continue.
+- If you found docker-compose and Dockerfile files then you would be good to continue.
 
 - Start the Jenkins Docker container
 ```sh
