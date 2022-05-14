@@ -27,10 +27,10 @@ A simple repository for creating CI pipeline for python scripts with Jenkins
 - Commit your changes and push the code to GitHub.
 
 
-# DevOps Engineers:
+# For DevOps Engineers:
 
 ## System requirements:
-- You should have a running Jenkins server and if you don't you can follow the instructions inside that  [READMe.md file](launch-aws-ec2-jenkins-instance/README.md) or You can follow Jenkins instructions [Jenkins Website](https://www.jenkins.io/doc/book/installing/)
+- You should have a running Jenkins server and if you don't, you can follow the instructions inside this  [READMe.md file](launch-aws-ec2-jenkins-instance/README.md) or You can follow Jenkins instructions [Jenkins Website](https://www.jenkins.io/doc/book/installing/)
 - Make sure you have a public IP address so that webhook can work.
 - Open a terminal session (ssh) with your server to execute some commands.
 
@@ -63,18 +63,18 @@ cat key
 
 ## Create GitHub webhook
 
-- Go to your remote Repositry line (https://github.com/<User name>/<Repositry name>)
+- Go to your remote Repositry link (https://github.com/<User_name>/<Repositry_name>)
 - Click on Settings
 - Click on webhooks
 - Click on Add webhook
-- Paste your Jenkins server ip with this format
+- Paste your Jenkins server IP with this format
 ```
 http://<Jenkins server IP>:<Jenkins server port>/github-webhook/
 # for example
 http://54.75.50.180:8080/github-webhook/
 ```
 - Add webhook.
-- Make sure it's connected. Check recent deliveries
+- Make sure it's connected( Check recent deliveries).
 
 
 ## Add Docker to Jenkins
