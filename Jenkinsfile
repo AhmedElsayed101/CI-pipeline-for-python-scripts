@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Mandatory question') {
             steps {
-                sh 'python mandatory_question.py'
+                sh 'python questions/mandatory_question.py'
             }
         }
         stage('Optional question') {
             steps {
-                sh 'python optional_question.py'
+                sh 'python questions/optional_question.py'
             }
         }
     }
