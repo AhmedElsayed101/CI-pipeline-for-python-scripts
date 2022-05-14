@@ -137,7 +137,7 @@ sudo docker-compose exec jenkins cat /var/jenkins_home/secrets/initialAdminPassw
 ![server-4](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-4.png)
 
 - Paste the password in the browser
-![server-5](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-5s.png)
+![server-5](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-5.png)
 
 - Install suggested plugins
 ![server-6](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/server/server-6.png)
