@@ -34,6 +34,7 @@ A simple repository for creating CI pipeline for python scripts with Jenkins
 ### Warning! 
 ### You need to fork this repository or deploy it on a remote repository that you have access to, so you can create ssh keys and webhooks.
 ### There is no input validation, so you need to follow the question's input structure according to the instructions inside each file.
+### Images might only appear on the GitHub website, not locally on your machine as they are already hosted on another Github repository. I didn't add them here in the same repository to make it more concise and lightweight.
 
 ## Generate ssh-key pair
 - Follow the instructions in this file [Generate ssh-key pair](./readme-files/generate-ssh-key-pair.md)
