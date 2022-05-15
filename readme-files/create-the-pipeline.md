@@ -28,7 +28,7 @@
 - Select the ssh Credintial that we have created to remove the error.
 ![pipeline-10](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/pipeline/pipeline-10.png)
 
-- Change branch to (/main) or leave it blank.
+- Change branch to (*/main) or leave it blank.
 ![pipeline-11](https://github.com/AhmedElsayed1011/python-pipeline-images/blob/main/pipeline/pipeline-11.png)
 
 - Make sure that Script Path is (Jenkins)
